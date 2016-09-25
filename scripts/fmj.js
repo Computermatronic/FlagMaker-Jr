@@ -33,6 +33,12 @@ $(document).ready(function() {
 	$("#divisions input").bind("change", function() {
 		draw();
 	});
+
+	$('#flagNameText').friendurl({
+		id : '_flagNameText',
+		divider: '-',
+		transliterate: true
+	});
 });
 
 function makePalette(p) {
@@ -84,6 +90,8 @@ function setRatio(x, y) {
 
 function setFlagSize() {
 	$("#flag").height($("#flag").width() * $("#ratioHeight").val() / $("#ratioWidth").val());
+	$("#canvas").attr("height", $("#flag").height() + "px");
+	$("#canvas").attr("width", $("#flag").width() + "px");
 	draw();
 }
 
@@ -189,8 +197,37 @@ function showSliders(count) {
 }
 
 function exportSvg() {
+	var flagName = $("#_flagNameText").val();
+	if (flagName == "" || typeof flagName === "undefined")
+		flagName = "flag.svg";
+	else
+		flagName += ".svg";
 	var pom = document.createElement("a");
-	pom.setAttribute("href", "data:image/svg+xml;charset=utf-8," + $('<svg>').append($('#flag').clone()).html(), "flag.svg");
-	pom.setAttribute("download", "flag.svg");
+	pom.setAttribute("href", "data:image/svg+xml;charset=utf-8," + $('<svg>').append($('#flag').clone()).html(), flagName);
+	pom.setAttribute("download", flagName);
 	pom.click();
+}
+
+function exportPng() {
+	var flagName = $("#_flagNameText").val();
+	if (flagName == "" || typeof flagName === "undefined")
+		flagName = "flag.png";
+	else
+		flagName += ".png";
+	var flagObject = $('#flag');
+	
+	canvg(document.getElementById('canvas'), $('<svg>').append($('#flag').clone()).html());
+	var canvas = document.getElementById("canvas");
+	var a = document.createElement('a');
+	a.download = flagName;
+	a.href = canvas.toDataURL('image/png');
+	document.body.appendChild(a);
+	a.click();
+
+	// var canvas = document.createElement('canvas');
+	// canvas.width = Math.floor(flagObject.width());
+	// canvas.height = Math.floor(flagObject.height());
+	// var context = canvas.getContext('2d');
+	// context.drawImage(flagObject, 0, 0);
+	
 }

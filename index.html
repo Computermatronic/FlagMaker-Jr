@@ -4,13 +4,17 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>FlagMaker Jr. Plus v. 1.1</title>
+	<title>FlagMaker Jr. Plus v. 1.2</title>
 	<link rel="icon" type="image/png" href="icon.ico">
 	
 	<!-- Libraries -->
 	<link rel="stylesheet" type="text/css" href="spectrum/spectrum.css">
 	<script src="scripts/jquery-2.1.1.min.js" type="text/javascript"></script>
 	<script src="scripts/jquery.mobile-1.4.3.min.js" type="text/javascript"></script>
+	<script src="scripts/jquery.friendurl.min.js" type="text/javascript"></script>
+	<script src="scripts/rgbcolor.js" type="text/javascript"></script>
+	<script src="scripts/StackBlur.js" type="text/javascript"></script>
+	<script src="scripts/canvg.min.js" type="text/javascript"></script>
 	<script src="spectrum/spectrum.js" type="text/javascript"></script>
 	<link href="styles/jquery.mobile-1.4.3.min.css" rel="stylesheet" type="text/css">
 	
@@ -30,8 +34,14 @@
 				<div data-role="controlgroup" data-type="horizontal">
 					<a href="#" class="ui-btn ui-corner-all" onclick="newFlag();">New</a>
 					<a href="#" class="ui-btn ui-corner-all" onclick="exportSvg();">Export SVG</a>
+					<a href="#" class="ui-btn ui-corner-all" onclick="exportPng();">Export PNG</a>
 				</div>
 				<div id="toolbar" data-role="controlgroup" data-type="vertical">
+					<div id="flagName" class="ui-field-contain" data-role="controlgroup" data-type="horizontal">
+						<div class="toolbarLabel">Flag name:</div>
+						<input type="text" min="1" id="flagNameText" class="flagName" />
+						<input type="hidden" min="1" id="_flagNameText" class="flagName" readonly="readonly" />
+					</div>
 					<div id="ratio" class="ui-field-contain" data-role="controlgroup" data-type="horizontal">
 						<div class="toolbarLabel">Ratio:</div>
 						<input type="number" min="1" id="ratioHeight" class="ratio" />
@@ -46,6 +56,7 @@
 			</div>
 			<div id="flagarea" class="area">
 				<svg id="flag" xmlns="http://www.w3.org/2000/svg"></svg>
+				<canvas id="canvas" width="1px" height="1px"></canvas>
 			</div>
 		</div>
 		<div id="toolarea" class="area">

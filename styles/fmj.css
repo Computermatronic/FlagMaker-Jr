@@ -14,16 +14,20 @@
 	padding: 0 10px;
 }
 
-#ratio {
+#ratio, #flagName {
 	padding-top: 10px;
 }
 
-#ratio div, #ratio input {
+#ratio div, #ratio input, #flagName div, #flagName input {
 	display: inline-block;
 }
 
 #ratio .ui-input-text {
 	max-width: 50px;
+}
+
+#flagName .ui-input-text {
+	max-width: 100%;
 }
 
 #toolbar {
@@ -56,6 +60,10 @@
 	background-color: #ffffff;
 	display: block;
 	width: 100%;
+}
+
+#canvas {
+	display: none;
 }
 
 .buttons {
