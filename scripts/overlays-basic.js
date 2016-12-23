@@ -180,7 +180,7 @@ function loadOverlaysBasic() {
 	
 	overlays[overlays.length] = {
 		name: "Half ellipse",
-		sliders: [["Left", "x-axis", 1], ["Top", "y-axis", 1], ["Width", "x-axis", 1], ["Height", "y-axis", 1], ["Rotation", "100", 0]],
+		sliders: [["Left", "x-axis", 1], ["Top", "y-axis", 1], ["Width", "x-axis", 1], ["Height", "y-axis", 1], ["Rotation", "x-axis", 0]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
