@@ -1,7 +1,7 @@
 function loadOverlaysBasic() {
 	overlays[overlays.length] = {
 		name: "Border",
-		sliders: [["Thickness", true, 1]],
+		sliders: [["Thickness", 1, 1]],
 		draw: function (fill, values) {
 			var w = $("#flag").width();
 			var h = $("#flag").height();
@@ -26,7 +26,7 @@ function loadOverlaysBasic() {
 	
 	overlays[overlays.length] = {
 		name: "Box",
-		sliders: [["Left", true, 1], ["Top", false, 1], ["Width", true, 1], ["Height", false, 1]],
+		sliders: [["Left", 1, 1], ["Top", 0, 1], ["Width", 1, 1], ["Height", 0, 1]],
 		draw: function (fill, values) {
 			var w = $("#flag").width();
 			var h = $("#flag").height();
@@ -43,7 +43,7 @@ function loadOverlaysBasic() {
 	
 	overlays[overlays.length] = {
 		name: "Checkerboard",
-		sliders: [["Left", true, 1], ["Top", false, 1], ["Width", true, 1], ["Height", false, 1], ["Count horizontal", true, 1], ["Count vertical", false, 1]],
+		sliders: [["Left", 1, 1], ["Top", 0, 1], ["Width", 1, 1], ["Height", 0, 1], ["Count horizontal", 1, 1], ["Count vertical", 0, 1]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -79,7 +79,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Cross",
-		sliders: [["Left", true, 1], ["Top", false, 1], ["Thickness", true, 1]],
+		sliders: [["Left", 1, 1], ["Top", 0, 1], ["Thickness", 1, 1]],
 		draw: function (fill, values) {
 			var w = $("#flag").width();
 			var h = $("#flag").height();
@@ -107,7 +107,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Diamond",
-		sliders: [["Left", true, 1], ["Top", false, 1], ["Width", true, 1], ["Height", false, 1]],
+		sliders: [["Left", 1, 1], ["Top", 0, 1], ["Width", 1, 1], ["Height", 0, 1]],
 		draw: function (fill, values) {
 			var w = $("#flag").width() * (values[2] / maxX);
 			var h = values[3] == 0
@@ -126,7 +126,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Ellipse",
-		sliders: [["Left", true, 1], ["Top", false, 1], ["Width", true, 1], ["Height", false, 1]],
+		sliders: [["Left", 1, 1], ["Top", 0, 1], ["Width", 1, 1], ["Height", 0, 1]],
 		draw: function (fill, values) {
 			var w = $("#flag").width() * values[2] / maxX;
 			var h = values[3] == 0
@@ -148,7 +148,7 @@ function loadOverlaysBasic() {
 	
 	overlays[overlays.length] = {
 		name: "Fimbriation backward",
-		sliders: [["Thickness", true, 1]],
+		sliders: [["Thickness", 1, 1]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -164,7 +164,7 @@ function loadOverlaysBasic() {
 	
 	overlays[overlays.length] = {
 		name: "Fimbriation forward",
-		sliders: [["Thickness", true, 1]],
+		sliders: [["Thickness", 1, 1]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -180,7 +180,7 @@ function loadOverlaysBasic() {
 	
 	overlays[overlays.length] = {
 		name: "Half ellipse",
-		sliders: [["Left", true, 1], ["Top", false, 1], ["Width", true, 1], ["Height", false, 1], ["Rotation", true, 0]],
+		sliders: [["Left", 1, 1], ["Top", 0, 1], ["Width", 1, 1], ["Height", 0, 1], ["Rotation", 1, 0]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -210,7 +210,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Half saltire",
-		sliders: [["Thickness", true, 1]],
+		sliders: [["Thickness", 1, 1]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -243,7 +243,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Line",
-		sliders: [["X1", true, 1], ["Y1", false, 1], ["X2", true, 2], ["Y2", true, 2], ["Thickness", true, 1]],
+		sliders: [["X1", 1, 1], ["Y1", 0, 1], ["X2", 1, 2], ["Y2", 1, 2], ["Thickness", 1, 1]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -261,7 +261,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Line horizontal",
-		sliders: [["Y", false, 1], ["Thickness", true, 1]],
+		sliders: [["Y", 0, 1], ["Thickness", 1, 1]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -281,7 +281,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Line vertical",
-		sliders: [["X", true, 1], ["Thickness", true, 1]],
+		sliders: [["X", 1, 1], ["Thickness", 1, 1]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -301,7 +301,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Pall",
-		sliders: [["X", true, 1], ["Thickness", true, 1]],
+		sliders: [["X", 1, 1], ["Thickness", 1, 1]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -317,7 +317,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Quadrilateral",
-		sliders: [["X1", true, 1], ["Y1", false, 1], ["X2", true, 2], ["Y2", false, 1], ["X3", true, 3], ["Y3", false, 2], ["X4", true, 2], ["Y4", false, 2]],
+		sliders: [["X1", 1, 1], ["Y1", 0, 1], ["X2", 1, 2], ["Y2", 0, 1], ["X3", 1, 3], ["Y3", 0, 2], ["X4", 1, 2], ["Y4", 0, 2]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -339,7 +339,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Rays",
-		sliders: [["Left", true, 1], ["Top", false, 1], ["Count", true, 5]],
+		sliders: [["Left", 1, 1], ["Top", 0, 1], ["Count", 2, 5]],
 		draw: function (fill, values) {
 			// Get path data
 			var width = $("#flag").width();
@@ -391,7 +391,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Ring",
-		sliders: [["Left", true, 1], ["Top", false, 1], ["Width", true, 1], ["Height", false, 1], ["Size", true, 1]],
+		sliders: [["Left", 1, 1], ["Top", 0, 1], ["Width", 1, 1], ["Height", 0, 1], ["Size", 1, 1]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -417,7 +417,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Saltire",
-		sliders: [["Thickness", true, 1]],
+		sliders: [["Thickness", 1, 1]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -438,7 +438,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Triangle",
-		sliders: [["X1", true, 1], ["Y1", false, 1], ["X2", true, 2], ["Y2", false, 1], ["X3", true, 3], ["Y3", false, 2]],
+		sliders: [["X1", 1, 1], ["Y1", 0, 1], ["X2", 1, 2], ["Y2", 0, 1], ["X3", 1, 3], ["Y3", 0, 2]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
