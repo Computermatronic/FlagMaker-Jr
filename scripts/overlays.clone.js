@@ -80,10 +80,10 @@ function getSliderString(overlay, id) {
 		var maxType = overlay.sliders[i][1];
 		
 		string += "<label for=\"slider-" + name + "-" + i + "\">" + label + "</label>" +
-		          "<input type=\"range\" name=\"" + name + "\" id=\"" + name + "\" data-highlight=\"true\" min=\"0\" max=\"" + (maxType == 0 ? maxY : (maxType == 1 ? maxX : 100)) + "\" value=\"" + overlay.sliders[i][2] + "\" step=\".1\" ";
-		if (maxType == 1) {
+		          "<input type=\"range\" name=\"" + name + "\" id=\"" + name + "\" data-highlight=\"true\" min=\"0\" max=\"" + (maxType == "y-axis" ? maxY : (maxType == "x-axis" ? maxX : 100)) + "\" value=\"" + overlay.sliders[i][2] + "\" step=\".1\" ";
+		if (maxType == "x-axis") {
 			string += "use-x ";
-		} else if(maxType == 0) {
+		} else if(maxType == "y-axis") {
 			string += "use-y ";
 		} else {
 			string += "use-none";
