@@ -132,11 +132,11 @@ function getSliderString(overlay, id, overlayName) {
 		if(typeof overlayName !== "undefined"){
 			overlayProperties["overlay" + id][i + 2] = overlayProperties[overlayName][i + 2];
 			string += "<label for=\"slider-" + name + "-" + i + "\">" + label + "</label>" +
-			          "<input type=\"range\" name=\"" + name + "\" id=\"" + name + "\" data-highlight=\"true\" min=\"0\" max=\"" + (maxType == 0 ? maxX : (maxType == 1 ? maxY : 100)) + "\" value=\"" + overlayProperties[overlayName][i + 2] + "\" step=\".1\" ";
+			          "<input type=\"range\" name=\"" + name + "\" id=\"" + name + "\" data-highlight=\"true\" min=\"0\" max=\"" + (maxType == 0 ? maxY : (maxType == 1 ? maxX : 100)) + "\" value=\"" + overlayProperties[overlayName][i + 2] + "\" step=\".1\" ";
 		} else {
 			overlayProperties["overlay" + id][i + 2] = overlay.sliders[i][2];
 			string += "<label for=\"slider-" + name + "-" + i + "\">" + label + "</label>" +
-			          "<input type=\"range\" name=\"" + name + "\" id=\"" + name + "\" data-highlight=\"true\" min=\"0\" max=\"" + (maxType == 0 ? maxX : (maxType == 1 ? maxY : 100)) + "\" value=\"" + overlay.sliders[i][2] + "\" step=\".1\" ";
+			          "<input type=\"range\" name=\"" + name + "\" id=\"" + name + "\" data-highlight=\"true\" min=\"0\" max=\"" + (maxType == 0 ? maxY : (maxType == 1 ? maxX : 100)) + "\" value=\"" + overlay.sliders[i][2] + "\" step=\".1\" ";
 		}
 		if (maxType == 0) {
 			string += "use-x ";

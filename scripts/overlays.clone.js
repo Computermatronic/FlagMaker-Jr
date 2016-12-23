@@ -77,14 +77,16 @@ function getSliderString(overlay, id) {
 	for (var i = 0; i < overlay.sliders.length; i++) {
 		var label = overlay.sliders[i][0];
 		var name = "slider-" + id + "-" + i;
-		var useX = overlay.sliders[i][1];
+		var maxType = overlay.sliders[i][1];
 		
 		string += "<label for=\"slider-" + name + "-" + i + "\">" + label + "</label>" +
-		          "<input type=\"range\" name=\"" + name + "\" id=\"" + name + "\" data-highlight=\"true\" min=\"0\" max=\"" + (useX ? maxX : maxY) + "\" value=\"" + overlay.sliders[i][2] + "\" step=\".1\" ";
-		if (useX) {
+		          "<input type=\"range\" name=\"" + name + "\" id=\"" + name + "\" data-highlight=\"true\" min=\"0\" max=\"" + (maxType == 0 ? maxY : (maxType == 1 ? maxX : 100)) + "\" value=\"" + overlay.sliders[i][2] + "\" step=\".1\" ";
+		if (maxType == 1) {
 			string += "use-x ";
-		} else {
+		} else if(maxType == 0) {
 			string += "use-y ";
+		} else {
+			string += "use-none";
 		}
 		string += ">";
 	}
