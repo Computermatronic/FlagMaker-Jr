@@ -180,7 +180,7 @@ function loadOverlaysBasic() {
 	
 	overlays[overlays.length] = {
 		name: "Half ellipse",
-		sliders: [["Left", "x-axis", 1], ["Top", "y-axis", 1], ["Width", "x-axis", 1], ["Height", "y-axis", 1], ["Rotation", "x-axis", 0]],
+		sliders: [["Left", "x-axis", 1], ["Top", "y-axis", 1], ["Width", "x-axis", 1], ["Height", "y-axis", 1], ["Rotation", "100", 0]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
@@ -339,7 +339,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Rays",
-		sliders: [["Left", "x-axis", 1], ["Top", "y-axis", 1], ["Count", "x-axis", 5]],
+		sliders: [["Left", "x-axis", 1], ["Top", "y-axis", 1], ["Count", "100", 5]],
 		draw: function (fill, values) {
 			// Get path data
 			var width = $("#flag").width();
@@ -391,7 +391,7 @@ function loadOverlaysBasic() {
 
 	overlays[overlays.length] = {
 		name: "Ring",
-		sliders: [["Left", "x-axis", 1], ["Top", "y-axis", 1], ["Width", "x-axis", 1], ["Height", "y-axis", 1], ["Size", "x-axis", 1]],
+		sliders: [["Left", "x-axis", 1], ["Top", "y-axis", 1], ["Width", "x-axis", 1], ["Height", "y-axis", 1], ["Size", "100", 1]],
 		draw: function (fill, values) {
 			var width = $("#flag").width();
 			var height = $("#flag").height();
