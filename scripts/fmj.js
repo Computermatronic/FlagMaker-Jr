@@ -103,7 +103,7 @@ function setSliderMaxes(x, y) {
 	});
 	
 	$("#overlayArea input[type=number]").each(function() {
-		if ($(this).attr("use-none"))
+		if ($(this).attr("use-none") !== undefined)
 		{
 			print("WTF");
 			return;
