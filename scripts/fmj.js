@@ -104,7 +104,10 @@ function setSliderMaxes(x, y) {
 	
 	$("#overlayArea input[type=number]").each(function() {
 		if ($(this).attr("use-none"))
+		{
+			print("WTF");
 			return;
+		}
 		var useX = $(this).attr("use-x");
 		var useY = $(this).attr("use-y");
 		var max = x;
