@@ -670,7 +670,7 @@ function loadOverlaysObject() {
 		var overlay = objectOverlays[i];
 		overlays[overlays.length] = {
 			name: overlay.name,
-			sliders: [["Left", true, 1], ["Top", false, 1], ["Size", true, 1], ["Rotation", true, 2]],
+			sliders: [["Left", 1, 1], ["Top", false, 1], ["Size", 1, 1], ["Rotation", 2, 0]],
 			data: overlay.path,
 			width: overlay.width,
 			height: overlay.height,
