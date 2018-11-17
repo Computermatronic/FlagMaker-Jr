@@ -27,7 +27,7 @@ function overlayNames(overlayName) {
 	return list;
 }
 
-function addOverlay(event, overlayName) {
+function addOverlay(overlayName) {
 	event.preventDefault();
 	overlayProperties["overlay" + overlayId] = [];
 	if(typeof overlayName !== "undefined"){
