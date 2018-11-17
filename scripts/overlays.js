@@ -8,7 +8,7 @@ function loadOverlays() {
 	loadOverlaysObject();
 }
 
-function overlayNames(overlayName) {
+function overlayNames(event, overlayName) {
 	var list = "";
 	if(typeof overlayName !== "undefined"){
 		var overlayIndex = overlayProperties[overlayName][0];
